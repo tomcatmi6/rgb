@@ -1,7 +1,7 @@
 var num = document.getElementById("number");
 var scr = document.getElementById("score");
 
-num.addEventListener("click", function() { 
+num.addEventListener("change", function() { 
     score.innerHTML = num.value;
 });
 
@@ -44,10 +44,12 @@ pl2.addEventListener("click", function() {
 // reset
 var res = document.querySelectorAll("button")[2];
 res.addEventListener("click", function() {
+    num.value = 0;
     var i = 1;
     var j = 1;
     pl1goal.innerHTML = 0; 
     pl2goal.innerHTML = 0;
-
+    pl1goal.style.color ="black";
+    pl2goal.style.color ="black";
 })
 
