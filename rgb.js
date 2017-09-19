@@ -132,7 +132,7 @@ function reset (){
    run();
 
 }
-// run();
+run();
 var newColor = document.getElementById("newColor");
 
 // newColor.onclick = losuj;
