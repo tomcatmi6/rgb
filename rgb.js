@@ -1,8 +1,12 @@
 var sqr = document.getElementsByClassName("kwadrat");
 var rgbmain = document.getElementById("rgbhead");
 var newColor = document.getElementById("newColor");
+var tryAgain = document.getElementById("tryAgain");
+  var sqrWrap = document.getElementById("row");
+  var head = document.getElementById("head");
 
-run();
+
+
 
 
 losuj();
@@ -41,30 +45,16 @@ function sqrToColor() {
   }
 }
 
-function reset() {
-  for (var i = 0; i < sqr.length; i++) {
-    sqr[i].style.opacity = "1";
-    sqr[i].style.transition = "opacity 1s ease-in";
-  }
-  tryAgain.innerHTML = "";
-  run();
-}
+sqrWrap.addEventListener("click", isCorrect);
 
-function run() {
-  var tryAgain = document.getElementById("tryAgain");
-  var sqrWrap = document.getElementById("row");
-  var head = document.getElementById("head");
-  losuj();
-  losuj1();
-  newNumber();
-  function isCorrect() {
+function isCorrect(event) {
     if (event.target.style.backgroundColor == rgbmain.innerHTML) {
       tryAgain.innerHTML = "Great, you made it!";
       head.style.backgroundColor = rgbmain.innerHTML;
 
       sqrToColor();
 
-      console.log("this.style.backgroundColor");
+     
     } else {
       console.log("baaba");
       tryAgain.innerHTML = "Try Again!";
@@ -72,10 +62,27 @@ function run() {
       event.target.style.transition = "opacity 1s ease-out";
     }
   }
-  sqrWrap.addEventListener("click", isCorrect);
+
+function reset() {
+  for (var i = 0; i < sqr.length; i++) {
+    sqr[i].style.opacity = "1";
+    sqr[i].style.transition = "opacity 1s ease-in";
+  }
+  tryAgain.innerHTML = "";
+  run(event);
 }
 
-run();
+function run() {
+  
+  losuj();
+  losuj1();
+  newNumber();
+  
+  
+  
+}
+
+run(event);
 
 
 newColor.onclick = reset;
