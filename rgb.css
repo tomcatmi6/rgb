@@ -1,0 +1,54 @@
+.big {
+    background-color: #232323;
+    height: 1000px;
+    display: block;
+}
+#head {
+    font-family: Montserrat;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #AD08AD;
+    color: white;
+    margin: 0 0 ;
+}
+
+#newColor {
+    cursor: pointer;
+}
+
+#tryAgain {
+    color: black;   
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#rgbhead {
+    font-size: 3em;
+}
+.linia {
+    font-family: Montserrat;
+    font-weight: strong;
+    text-transform: uppercase;
+   
+    text-align: center;
+    color: #AD08AD;
+    background-color: white;
+}
+.easy {
+    margin-left: 7%;
+}
+#row{
+    margin-left: 33%;
+    margin-right: 33%
+    
+}
+.kwadrat {
+    border-radius: 24px;
+  padding-bottom: 30%;
+    margin: 1.66% 1.66% ;
+    float: left;
+    width: 30%;
+    height: 30%;
+    
+    max-width: 30%;
+    max-height: 30%;
+}
